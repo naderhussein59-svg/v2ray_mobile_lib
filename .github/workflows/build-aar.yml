@@ -1,6 +1,9 @@
 name: Build AAR
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
@@ -27,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: v2ray-lib-aar
-          path: **/build/outputs/aar/*.aar
+          path: '**/build/outputs/aar/*.aar'
